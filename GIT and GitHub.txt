@@ -1,0 +1,127 @@
+► What is Git
+Is version control system that allows one or more people to work on the same code base/ project
+
+► What is Github
+The hosting platform that allows us to host our project in the cloud. other hosting paltforms are (Bitbucket, Gitlab, CodeCommit(AWS) and many others)
+It's is now owned by microsoft
+
+
+► How Git works
+Working directory-> Staging area-> commit history -> Remote server
+Commands- (git add .)-> (git commit)  ->  (git push)->
+
+► Setup Git
+Install Git bash or Commander (this is learning git the right way using the terminal or commandline)
+learn the gui client later.
+
+NB. "git init ." is usually used for when you are working on a brand new project.
+
+--Commands for configuring GIT--
+git config --global user.name "xxx"
+git config --global user.email "xx@x.com"
+git config  --global color.ui auto   -> this enables commandline colouring output
+
+Git Repository- Repositories in GIT contain a collection of files of various different versions of a project 
+
+Converting any repository into a GIT working Repository by Using this command- > "git init ."
+Changing the repository from git to a normal directory use -> ""rm -rf .git"
+
+How to create file in a directory:
+touch 'filename.extension' e.g touch myfile.html
+
+--Single files--
+Addind a file to the staging area/ tracking them use the following command:
+git add 'filename.extension' 
+
+Removing a file from the staging area/ untracking them use the following command:
+git rm --cached 'filename.extension'
+
+--Multiple files--
+ 
+Addind files to the staging area/ tracking them use the following command:
+"git add ." -means add all files from this current directory downwards
+
+Removing files from the staging area/ untracking them use the following command:
+"git rm - r --cached ." 
+
+-C drive|
+        |-> User|
+		        |->UnderstandingGit| 
+                                   |->Test1Folder|
+                                                 |->FileA								   
+
+To promote all the files in this path you must use the following command:
+git add -A
+
+► Git commits
+This is a safe point before implementing another feature
+-'git commit' -m 'Description'
+-'git diff' shows you what the difference of what you have in your working directory and what has been commited.
+TO check what has been commited use :
+'git log'
+
+Git has is a unique identifier generated for each commit called a Hash
+To see what changes where commited use: git show 'Use the hash provied for the specific commit'
+
+How to amend commits:
+git commit --amend -m "Decriptive message"
+
+
+► Github
+A platform for hosting and collaborating on GIT repositories
+platform for hosting GIT Projects
+
+► Git branches
+What is a branch:
+It represents a independent line of development
+
+Creating a new branch use:
+-  git branch 'branch name'
+
+Checking which branch you are on:
+Checking which branch you are on  use -> git branch
+checking how many or list of branches there are on the remote server use -> git branch -r
+Want see all branches use -> git branch -a
+Want to create a new branch use -> git branch 'new branch name' e.g git branch feature-a
+N.B  after creating a new branch make sure you switch to it or else you will be making changes on the main branch -> git checkout feature-a
+Want to checkout to the previous branch-> git checkout -
+
+
+Create and checout into the new branch in one step - 
+-> "git checkout -b 'feature-d'"
+
+Deleting a branch
+"git branch -d 'feature-d'"
+
+
+► Git push
+
+Pushing a new branch to the remote repository use :
+ "git push --set-upstream 'branchName'" OR "git push -u origin 'branchName'"
+ 
+ N.B always pull befor pushing changes
+ 
+► Git merge
+when merging code to main/master you should raise a PR(pull request). Do not use the fir command. Its best practice to raise a PR when working on a project involving other people pushin in changes.
+ 'git merge branchName'
+ 
+ Side note: vi-> to exit vi screen -> :q!
+ to edit details in a file using bash/cmd- 'cat nameOfFile.txt'
+► Git rebase
+git pull -r origin main
+
+git push -f - force pushes changes to remote after rebase
+
+
+
+►Git Clients
+GUI apps which are an alternative to using command line/ terminal
+Git ui 
+Source city 
+
+ 
+► Pull Requests
+It is advised that pull requests are done on Github- and comments need to be added for the reviewer to know what is being commited to the main branch.
+
+► Exploring GiHub
+► Open Source Software
